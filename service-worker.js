@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PTMFoundationAdmin/precache-manifest.8b238e6f633f8f6fd494af6c8e70996b.js"
+  "/PTMFoundationAdmin/precache-manifest.a0d51b37f0b4273ba04021a5e0f1a265.js"
 );
 
 self.addEventListener('message', (event) => {
