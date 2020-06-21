@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2095e6eae43ec3f9213000790dc870c5",
+    "revision": "ce320615511aa40e9db67d6d7e8cbfdf",
     "url": "/PTMFoundationAdmin/index.html"
   },
   {
-    "revision": "cf2a57148e0c0501d37e",
+    "revision": "9cc5a5308fa9dca846ec",
     "url": "/PTMFoundationAdmin/static/css/main.f5ab49bc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PTMFoundationAdmin/static/js/2.6da874c3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf2a57148e0c0501d37e",
-    "url": "/PTMFoundationAdmin/static/js/main.9c2bf608.chunk.js"
+    "revision": "9cc5a5308fa9dca846ec",
+    "url": "/PTMFoundationAdmin/static/js/main.1c362a07.chunk.js"
   },
   {
     "revision": "d9c04981182530d112a6",
