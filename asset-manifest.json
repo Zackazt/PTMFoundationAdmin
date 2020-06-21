@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ptmfoundation-admin/static/css/main.f5ab49bc.chunk.css",
+    "main.js": "/ptmfoundation-admin/static/js/main.9c2bf608.chunk.js",
+    "main.js.map": "/ptmfoundation-admin/static/js/main.9c2bf608.chunk.js.map",
+    "runtime-main.js": "/ptmfoundation-admin/static/js/runtime-main.23c235fe.js",
+    "runtime-main.js.map": "/ptmfoundation-admin/static/js/runtime-main.23c235fe.js.map",
+    "static/js/2.6da874c3.chunk.js": "/ptmfoundation-admin/static/js/2.6da874c3.chunk.js",
+    "static/js/2.6da874c3.chunk.js.map": "/ptmfoundation-admin/static/js/2.6da874c3.chunk.js.map",
+    "index.html": "/ptmfoundation-admin/index.html",
+    "precache-manifest.4eb37a48677d19f86c1f0c979a908a65.js": "/ptmfoundation-admin/precache-manifest.4eb37a48677d19f86c1f0c979a908a65.js",
+    "service-worker.js": "/ptmfoundation-admin/service-worker.js",
+    "static/css/main.f5ab49bc.chunk.css.map": "/ptmfoundation-admin/static/css/main.f5ab49bc.chunk.css.map",
+    "static/js/2.6da874c3.chunk.js.LICENSE.txt": "/ptmfoundation-admin/static/js/2.6da874c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23c235fe.js",
+    "static/js/2.6da874c3.chunk.js",
+    "static/css/main.f5ab49bc.chunk.css",
+    "static/js/main.9c2bf608.chunk.js"
+  ]
+}
