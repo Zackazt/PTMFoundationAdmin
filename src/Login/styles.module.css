@@ -1,0 +1,18 @@
+.loginInput {
+  display: block; 
+  width: 100%; 
+  margin-bottom: 5px; 
+  padding: 10px; 
+  box-sizing: border-box;
+}
+.loginButton {
+  width: 100%;
+  padding: 5px;
+}
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+.error {
+  color: red;
+  margin-bottom: 25px;
+}

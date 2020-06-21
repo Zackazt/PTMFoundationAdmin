@@ -1,0 +1,33 @@
+.form {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 7px;
+}
+.form input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.form textarea {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 15px;
+  resize: none;
+  height: 250px;
+}
+.form button {
+  width: 100%;
+  padding: 5px;
+}
+.form button:disabled {
+  cursor: not-allowed;
+}
+.cancelButton {
+  background-color: red;
+  color: white;
+  margin-top: 10px;
+}
