@@ -11,10 +11,7 @@ export const Login = () => {
 
   const login = () => {
     if(email && password) {
-      fLogin(email, password)
-      .then(res => {
-        console.log(res);
-      })
+      fLogin(email.trim(), password.trim())
       .catch(error => {
         if(error.code === 'auth/invalid-email') {
           setError('Invalid credentials');
@@ -50,7 +47,6 @@ export const Login = () => {
           }
         }}
         onChange={(e) => setPassword(e.target.value)} />
-
         {
           error &&
           <div className={styles.error}>

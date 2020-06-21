@@ -36,18 +36,20 @@ export const PostForm = ({ isEdit }) => {
     if (post.title && post.body && post.img) {
       if (isEdit && postId) {
         firebase.firestore().collection('posts').doc(postId).update({
-          title: post.title,
-          body: post.body,
-          img: post.img,
-        }).then(() => history.push('/home'));
+          title: post.title.trim(),
+          body: post.body.trim(),
+          img: post.img.trim(),
+        }).then(() => history.push('/PTMFoundationAdmin/home'));
       } else {
         firebase
           .firestore()
           .collection('posts')
           .add({
-            ...post,
+            title: post.title.trim(),
+            body: post.body.trim(),
+            img: post.img.trim(),
             date: Date.now(),
-          }).then(() => history.push('/home'));
+          }).then(() => history.push('/PTMFoundationAdmin/home'));
       }
     }
   };
@@ -93,7 +95,7 @@ export const PostForm = ({ isEdit }) => {
       />
 
       <button onClick={updatePost}>{isEdit ? 'Update' : 'Create'}</button>
-      <button className={styles.cancelButton} onClick={() => history.push('/home')}>
+      <button className={styles.cancelButton} onClick={() => history.push('/PTMFoundationAdmin/home')}>
         Cancel
       </button>
     </div>

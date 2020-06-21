@@ -44,8 +44,8 @@ export const PostFeed = () => {
     }
   };
 
-  const newPost = () => history.push('/new');
-  const editPost = (post) => history.push(`/edit?post=${post.id}`);
+  const newPost = () => history.push('/PTMFoundationAdmin/new');
+  const editPost = (post) => history.push(`/PTMFoundationAdmin/edit?post=${post.id}`);
 
   return (
     <div className={styles.postContainer}>

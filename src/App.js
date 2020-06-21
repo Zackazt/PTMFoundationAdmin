@@ -22,9 +22,9 @@ export const App = () => {
 
   useEffect(() => {
     if(user) {
-      history.push('/home');
+      history.push('/PTMFoundationAdmin/home');
     } else {
-      history.push('/login');
+      history.push('/PTMFoundationAdmin/login');
     }
   }, [user, history]);
 
@@ -32,16 +32,16 @@ export const App = () => {
     <div>
       <button onClick={logOut}>Log Out</button>
       <Switch>
-        <Route path='/login'>
+        <Route path='/PTMFoundationAdmin/login'>
           <Login />
         </Route>
-        <Route path='/home'>
+        <Route path='/PTMFoundationAdmin/home'>
           <PostFeed />
         </Route>
-        <Route path='/new'>
+        <Route path='/PTMFoundationAdmin/new'>
           <PostForm isEdit={false} />
         </Route>
-        <Route path='/edit'>
+        <Route path='/PTMFoundationAdmin/edit'>
           <PostForm isEdit={true} />
         </Route>
       </Switch>
