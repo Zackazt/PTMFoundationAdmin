@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/PTMFoundationAdmin/static/css/main.f5ab49bc.chunk.css",
-    "main.js": "/PTMFoundationAdmin/static/js/main.fb263304.chunk.js",
-    "main.js.map": "/PTMFoundationAdmin/static/js/main.fb263304.chunk.js.map",
+    "main.js": "/PTMFoundationAdmin/static/js/main.80ad0912.chunk.js",
+    "main.js.map": "/PTMFoundationAdmin/static/js/main.80ad0912.chunk.js.map",
     "runtime-main.js": "/PTMFoundationAdmin/static/js/runtime-main.666734a7.js",
     "runtime-main.js.map": "/PTMFoundationAdmin/static/js/runtime-main.666734a7.js.map",
-    "static/js/2.6da874c3.chunk.js": "/PTMFoundationAdmin/static/js/2.6da874c3.chunk.js",
-    "static/js/2.6da874c3.chunk.js.map": "/PTMFoundationAdmin/static/js/2.6da874c3.chunk.js.map",
+    "static/js/2.6b544c85.chunk.js": "/PTMFoundationAdmin/static/js/2.6b544c85.chunk.js",
+    "static/js/2.6b544c85.chunk.js.map": "/PTMFoundationAdmin/static/js/2.6b544c85.chunk.js.map",
     "index.html": "/PTMFoundationAdmin/index.html",
-    "precache-manifest.30a4afd6898bdc5c71739ad6c49fc865.js": "/PTMFoundationAdmin/precache-manifest.30a4afd6898bdc5c71739ad6c49fc865.js",
+    "precache-manifest.8b238e6f633f8f6fd494af6c8e70996b.js": "/PTMFoundationAdmin/precache-manifest.8b238e6f633f8f6fd494af6c8e70996b.js",
     "service-worker.js": "/PTMFoundationAdmin/service-worker.js",
     "static/css/main.f5ab49bc.chunk.css.map": "/PTMFoundationAdmin/static/css/main.f5ab49bc.chunk.css.map",
-    "static/js/2.6da874c3.chunk.js.LICENSE.txt": "/PTMFoundationAdmin/static/js/2.6da874c3.chunk.js.LICENSE.txt"
+    "static/js/2.6b544c85.chunk.js.LICENSE.txt": "/PTMFoundationAdmin/static/js/2.6b544c85.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.666734a7.js",
-    "static/js/2.6da874c3.chunk.js",
+    "static/js/2.6b544c85.chunk.js",
     "static/css/main.f5ab49bc.chunk.css",
-    "static/js/main.fb263304.chunk.js"
+    "static/js/main.80ad0912.chunk.js"
   ]
 }
