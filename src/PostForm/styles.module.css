@@ -31,3 +31,12 @@
   color: white;
   margin-top: 10px;
 }
+.imgErr {
+  color: red;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+.error {
+  border: 2px solid red;
+}

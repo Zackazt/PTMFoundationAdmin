@@ -14,6 +14,8 @@ export const PostForm = ({ isEdit }) => {
   const history = useHistory();
   const location = useLocation();
 
+  const [imgError, setImageErr] = useState('');
+
   useEffect(() => {
     const postId = location.search?.split('post=')?.[1];
     if (isEdit && postId) {
@@ -31,9 +33,13 @@ export const PostForm = ({ isEdit }) => {
     }
   }, [location.search, isEdit]);
 
+  const isImgUrl = (url) => {
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+  };
+
   const updatePost = () => {
     const postId = location.search?.split('post=')?.[1];
-    if (post.title && post.body && post.img) {
+    if (post.title && post.body && post.img && isImgUrl(post.img)) {
       if (isEdit && postId) {
         firebase.firestore().collection('posts').doc(postId).update({
           title: post.title.trim(),
@@ -51,6 +57,8 @@ export const PostForm = ({ isEdit }) => {
             date: Date.now(),
           }).then(() => history.push('/PTMFoundationAdmin/home'));
       }
+    } else if (post.img && !isImgUrl(post.img)) {
+      setImageErr('Please post the direct link to the image. It should end in .png, .jpg, etc');
     }
   };
 
@@ -74,6 +82,7 @@ export const PostForm = ({ isEdit }) => {
       <input
         placeholder='Image URL'
         value={post.img}
+        className={imgError ? styles.error : ''}
         onChange={(e) =>
           setPost({
             ...post,
@@ -81,6 +90,7 @@ export const PostForm = ({ isEdit }) => {
           })
         }
       />
+      <span className={styles.imgErr}>{imgError}</span>
 
       <label>Post Body</label>
       <textarea
