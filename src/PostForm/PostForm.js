@@ -9,6 +9,7 @@ export const PostForm = ({ isEdit }) => {
     body: '',
     title: '',
     img: '',
+    date: 0
   });
 
   const history = useHistory();
@@ -37,6 +38,13 @@ export const PostForm = ({ isEdit }) => {
     return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
   };
 
+  const getDateFromMS = (ms) => {
+    return new Date(ms).toISOString().slice(0, 10);
+  };
+  const getMSFromDate = (date) => {
+    return new Date(date).valueOf();
+  };
+
   const updatePost = () => {
     const postId = location.search?.split('post=')?.[1];
     if (post.title && post.body && post.img && isImgUrl(post.img)) {
@@ -45,6 +53,7 @@ export const PostForm = ({ isEdit }) => {
           title: post.title.trim(),
           body: post.body.trim(),
           img: post.img.trim(),
+          date: post.date
         }).then(() => history.push('/PTMFoundationAdmin/home'));
       } else {
         firebase
@@ -65,6 +74,15 @@ export const PostForm = ({ isEdit }) => {
   return (
     <div className={styles.form}>
       <h1>{isEdit ? 'Edit Post' : 'Create Post'}</h1>
+
+      <label>Date</label>
+      <input type='date' value={getDateFromMS(post.date)} onChange={(e) => {
+        e.persist();
+        setPost({
+          ...post,
+          date: getMSFromDate(e.target.value)
+        })
+      }} />
 
       <label>Title</label>
       <input
