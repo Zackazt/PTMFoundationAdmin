@@ -39,10 +39,18 @@ export const PostForm = ({ isEdit }) => {
   };
 
   const getDateFromMS = (ms) => {
-    return new Date(ms).toISOString().slice(0, 10);
+    if (new Date(ms)) {
+      return new Date(ms).toISOString().slice(0, 10);
+    } else {
+      return null;
+    }
   };
   const getMSFromDate = (date) => {
-    return new Date(date).valueOf();
+    if (new Date(date)) {
+      return new Date(date).valueOf();
+    } else {
+      return null;
+    }
   };
 
   const updatePost = () => {
@@ -83,14 +91,17 @@ export const PostForm = ({ isEdit }) => {
 
       <label>Date</label>
       <input
+        style={{ width: 'auto', display: 'block' }}
         type='date'
         value={getDateFromMS(post.date)}
         onChange={(e) => {
           e.persist();
-          setPost({
-            ...post,
-            date: getMSFromDate(e.target.value),
-          });
+          if (getMSFromDate(e.target.value)) {
+            setPost({
+              ...post,
+              date: getMSFromDate(e.target.value),
+            });
+          }
         }}
       />
 
