@@ -9,7 +9,7 @@ export const PostForm = ({ isEdit }) => {
     body: '',
     title: '',
     img: '',
-    date: 0
+    date: 0,
   });
 
   const history = useHistory();
@@ -35,7 +35,7 @@ export const PostForm = ({ isEdit }) => {
   }, [location.search, isEdit]);
 
   const isImgUrl = (url) => {
-    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+    return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
   };
 
   const getDateFromMS = (ms) => {
@@ -49,12 +49,17 @@ export const PostForm = ({ isEdit }) => {
     const postId = location.search?.split('post=')?.[1];
     if (post.title && post.body && post.img && isImgUrl(post.img)) {
       if (isEdit && postId) {
-        firebase.firestore().collection('posts').doc(postId).update({
-          title: post.title.trim(),
-          body: post.body.trim(),
-          img: post.img.trim(),
-          date: post.date
-        }).then(() => history.push('/PTMFoundationAdmin/home'));
+        firebase
+          .firestore()
+          .collection('posts')
+          .doc(postId)
+          .update({
+            title: post.title.trim(),
+            body: post.body.trim(),
+            img: post.img.trim(),
+            date: post.date,
+          })
+          .then(() => history.push('/PTMFoundationAdmin/home'));
       } else {
         firebase
           .firestore()
@@ -64,7 +69,8 @@ export const PostForm = ({ isEdit }) => {
             body: post.body.trim(),
             img: post.img.trim(),
             date: Date.now(),
-          }).then(() => history.push('/PTMFoundationAdmin/home'));
+          })
+          .then(() => history.push('/PTMFoundationAdmin/home'));
       }
     } else if (post.img && !isImgUrl(post.img)) {
       setImageErr('Please post the direct link to the image. It should end in .png, .jpg, etc');
@@ -76,13 +82,17 @@ export const PostForm = ({ isEdit }) => {
       <h1>{isEdit ? 'Edit Post' : 'Create Post'}</h1>
 
       <label>Date</label>
-      <input type='date' value={getDateFromMS(post.date)} onChange={(e) => {
-        e.persist();
-        setPost({
-          ...post,
-          date: getMSFromDate(e.target.value)
-        })
-      }} />
+      <input
+        type='date'
+        value={getDateFromMS(post.date)}
+        onChange={(e) => {
+          e.persist();
+          setPost({
+            ...post,
+            date: getMSFromDate(e.target.value),
+          });
+        }}
+      />
 
       <label>Title</label>
       <input
