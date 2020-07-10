@@ -10,7 +10,6 @@ export const App = () => {
 
   const [user, setUser] = useState();
   const history = useHistory();
-
   
   const logOut = () => {
     firebase.auth().signOut();
@@ -22,9 +21,9 @@ export const App = () => {
 
   useEffect(() => {
     if(user) {
-      history.push('/PTMFoundationAdmin/home');
+      history.push('/home');
     } else {
-      history.push('/PTMFoundationAdmin/login');
+      history.push('/login');
     }
   }, [user, history]);
 
@@ -32,16 +31,16 @@ export const App = () => {
     <div>
       <button onClick={logOut}>Log Out</button>
       <Switch>
-        <Route path='/PTMFoundationAdmin/login'>
+        <Route path='/login'>
           <Login />
         </Route>
-        <Route path='/PTMFoundationAdmin/home'>
+        <Route path='/home'>
           <PostFeed />
         </Route>
-        <Route path='/PTMFoundationAdmin/new'>
+        <Route path='/new'>
           <PostForm isEdit={false} />
         </Route>
-        <Route path='/PTMFoundationAdmin/edit'>
+        <Route path='/edit'>
           <PostForm isEdit={true} />
         </Route>
       </Switch>
